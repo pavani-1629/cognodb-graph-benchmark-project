@@ -1,0 +1,30 @@
+databases:
+  cognodb:
+    name: CognoDB Cloud
+    deployment: cloud
+    query_language: Cypher
+    connection: bolt+s
+
+  neo4j:
+    name: Neo4j
+    deployment: docker
+    query_language: Cypher
+    connection: bolt
+
+  memgraph:
+    name: Memgraph
+    deployment: docker
+    query_language: Cypher
+    connection: bolt
+
+  falkordb:
+    name: FalkorDB
+    deployment: docker
+    query_language: OpenCypher
+    connection: redis
+
+  arangodb:
+    name: ArangoDB
+    deployment: docker
+    query_language: AQL
+    connection: http

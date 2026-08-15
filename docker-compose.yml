@@ -1,0 +1,59 @@
+services:
+  neo4j:
+    image: neo4j:2026.06.0
+    container_name: benchmark-neo4j
+
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+
+    environment:
+      NEO4J_AUTH: neo4j/benchmarkpassword
+
+    volumes:
+      - neo4j_data:/data
+      - neo4j_logs:/logs
+
+  memgraph:
+    image: memgraph/memgraph:3.12.0
+    container_name: benchmark-memgraph
+
+    ports:
+      - "7688:7687"
+
+    volumes:
+      - memgraph_data:/var/lib/memgraph
+
+  falkordb:
+    image: falkordb/falkordb:latest
+    container_name: benchmark-falkordb
+
+    ports:
+      - "6379:6379"
+      - "3000:3000"
+
+    volumes:
+      - falkordb_data:/data
+
+  arangodb:
+    image: arangodb:3.12
+    container_name: benchmark-arangodb
+
+    ports:
+      - "8529:8529"
+
+    environment:
+      ARANGO_ROOT_PASSWORD: benchmarkpassword
+
+    volumes:
+      - arangodb_data:/var/lib/arangodb3
+
+volumes:
+  neo4j_data:
+  neo4j_logs:
+
+  memgraph_data:
+
+  falkordb_data:
+
+  arangodb_data:

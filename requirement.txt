@@ -1,0 +1,9 @@
+python-dotenv
+pandas
+numpy
+matplotlib
+psutil
+requests
+neo4j
+python-arango
+falkordb
