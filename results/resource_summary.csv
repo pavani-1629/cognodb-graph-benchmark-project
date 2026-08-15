@@ -1,0 +1,5 @@
+container,avg_cpu_percent,peak_cpu_percent,avg_memory_mib,peak_memory_mib
+benchmark-arangodb,1.291625,28.06,227.88125,232.3
+benchmark-falkordb,17.067,415.77,127.7325,128.5
+benchmark-memgraph,79.10137499999999,826.54,94.592625,103.9
+benchmark-neo4j,10.817499999999999,666.13,908.53875,932.5

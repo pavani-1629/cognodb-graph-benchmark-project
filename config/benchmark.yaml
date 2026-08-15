@@ -1,0 +1,21 @@
+dataset:
+  name: SNAP Pokec
+  relationships: 100000
+  random_seed: 42
+
+benchmark:
+  warmup_iterations: 20
+  measured_iterations: 100
+
+traversals:
+  start_nodes: 100
+
+concurrency:
+  levels:
+    - 1
+    - 10
+    - 40
+
+mixed_workload:
+  read_percentage: 70
+  write_percentage: 30
